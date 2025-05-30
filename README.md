@@ -60,10 +60,14 @@ By default active mode is enabled for SmartTags but disabled for any other devic
 
 [![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=smartthings_find)
 
-1. Go to the Integrations page
-2. Search for "SmartThings *Find*" (**do not confuse with the built-in SmartThings integration!**)
-3. To login, scan the QR Code shown in the config flow or follow the shown link.
-4. Wait a few seconds, and the integration should be ready.
+1. Go to the Integrations page  
+2. Search for "SmartThings *Find*" (**do not confuse this with the built-in SmartThings integration!**)  
+3. Visit https://smartthingsfind.samsung.com/ and log in with your Samsung account.  
+4. Open Developer Tools in your browser.  
+5. Follow the instructions below and copy the JSESSIONID value:  
+![screenshot](media/alternative_login_flow.png)  
+6. Enter your JSESSIONID into Home Assistant.  
+7. Wait a few seconds for the integration to be ready.
 
 ## Debugging
 
