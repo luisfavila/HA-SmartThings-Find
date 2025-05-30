@@ -114,20 +114,20 @@ class SmartThingsFindConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             errors=errors
         )
 
-    async def async_step_finish(self, user_input=None):
-        if self.error:
-            return self.async_show_form(step_id="finish", errors={'base': self.error})
-        data={CONF_JSESSIONID: self.jsessionid}
+    # async def async_step_finish(self, user_input=None):
+    #     if self.error:
+    #         return self.async_show_form(step_id="finish", errors={'base': self.error})
+    #     data={CONF_JSESSIONID: self.jsessionid}
         
-        if self.reauth_entry:
-            # Finish step was called by reauth-flow. Do not create a new entry,
-            # instead update the existing entry
-            return self.async_update_reload_and_abort(
-                self.reauth_entry,
-                data=data
-            )
+    #     if self.reauth_entry:
+    #         # Finish step was called by reauth-flow. Do not create a new entry,
+    #         # instead update the existing entry
+    #         return self.async_update_reload_and_abort(
+    #             self.reauth_entry,
+    #             data=data
+    #         )
         
-        return self.async_create_entry(title="SmartThings Find", data=data)
+        # return self.async_create_entry(title="SmartThings Find", data=data)
 
     async def async_step_reauth(self, user_input=None):
         self.reauth_entry = self.hass.config_entries.async_get_entry(
