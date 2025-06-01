@@ -92,10 +92,7 @@ For support, please create an issue on the GitHub repository.
 
 ## Roadmap
 
-- ~~HACS support~~ ✅
-- Service to let a device ring
-- Service to make a device stop ringing (for devices that support this feature)
-- ~~Allow adding two instances of this integration (two Samsung Accounts)~~ ✅
+- No roadmap, unfortunately, I don't have time for adding features
 
 ## Disclaimer
 
